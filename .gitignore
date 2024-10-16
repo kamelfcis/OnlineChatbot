@@ -1,2 +1,7 @@
 .idea/
-__pycache__/
+__pycache__/ 
+*.h5
+*.pkl
+*.json 
+*.pyc
+.DS_Store
