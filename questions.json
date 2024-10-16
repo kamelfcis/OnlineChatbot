@@ -1,0 +1,91 @@
+{"intents": [
+    {"tag": "greetings",
+    "patterns": ["hello","مرحبا","استفسار","مساء الخير","Greetings","what's up?","how is it going?"],
+    "responses": ["مرحبا بك في جامعة 6 اكتوبر","مرحبا بك في جامعة 6 اكتوبر!","مرحبا بك في جامعة 6 اكتوبر ممكن استفسارك"]
+    },
+  
+    {"tag": "name",
+    "patterns": ["what is your name","name","what's your name","who are you","what should I call you"],
+    "responses": ["You can call me Ribot","I'm Ribot","I'm Ribot your virtual assistant"]
+    },
+  
+    {"tag": "courses",
+    "patterns": ["كم ساعة معتمدة لابد من اجتيازها حتى يستطيع الطالب التخرج؟", "الساعات المعتمدة"],
+    "responses": ["142 ساعة معتمدة"]
+    },
+  
+     {"tag": "courseDuration",
+    "patterns": ["ما هو الحد الأقصى لعدد الساعات التي ممكن أن يسجلها الطالب في الفصل الصيفي؟", "how long will it take to complete BIT or BBA course"],
+    "responses": ["9 ساعات فقط."]
+    },
+  
+     {"tag": "Location",
+    "patterns": ["ماهي أقسام الكلية الثلاث؟","where is it located","what is the location of the college"],
+    "responses": ["صحافة، وإذاعة، وعلاقات عامة، وإعلان"]
+    },
+  
+    {"tag": "semesters",
+    "patterns": ["ماهي شروط الالتحاق بأقسام الكلية الثلاث؟","شروط الالتحاق بالكلية"],
+    "responses": ["وفقا للائحة الكلية يتم تحديد شروط الالتحاق بأقسام الكلية وفقا لما يلي:\nالمعدل التراكمي في الأربع فصول الدراسية التي اجتازها الطالب \nتقديرات مواد التخصص\nرغبة الطالب في حالة استيفاء المعياريين السابقين "]
+    },
+  
+    {"tag": "semDuration",
+    "patterns": ["متى يتم وضع الطالب تحت الإنذار الأكاديمي؟","الانظار الاكاديمي"],
+    "responses": ["عند انخفاض معدل التراكمي للطالب ليصبح أقل من 2 ، و يتم تخفيض العبأ الدراسي له ليصبح 12 ساعة فقط "]
+    },
+  
+    {"tag": "studentRequirements",
+    "patterns": ["ما شروط التحويل من كلية آخرى لكلية الإعلام وفنون الاتصال؟","entry requirements","admission requirements"],
+    "responses": ["أن يكون الطالب حاصلا على الثانوية العامة أو ما يعادلها في العام الحالي أو الأعوام السابقة بحد أقصي عامين فقط "]
+    },
+  
+    {"tag": "classes",
+    "patterns": ["هل يوجد شعبة انجليزية؟","how long are the classes?"],
+    "responses": ["لا يوجد شعبة انجليزية لكن هناك عدد من المقررات يتم تدريسها باللغة الإنجليزية "]
+    },
+  
+    {"tag": "teachingStyle",
+    "patterns": ["كيف يقوم الطالب بتسجيل المقررات الدراسية الخاصة به في كل فصل؟","Is the teaching pattern different from other college?","what is the teaching format?"],
+    "responses": ["يتم ذلك من خلال الموقع الإلكتروني للجامعة، حيث يقوم الطالب بتسجيل الدخول على موقع الجامعة من خلال البريد الإلكتروني الجامعي الخاص به ويقوم تسجيل رغبته في دراسة هذه المقررات بشكل مبدئي."]
+    },
+  
+    {"tag": "exams",
+    "patterns": ["what are the exams like?","What is the exam pattern"],
+    "responses": ["There are assignments which carry more weight than your written exams. The assignments have deadlines which you should not exceed if you want to get better marks."]
+    },
+  
+    {"tag": "hours",
+    "patterns": ["what are your hours","when are you guys open","what your hours of operation"],
+    "responses": ["You can message us here at any hours. But our college premises will be open from 7:00 am to 5:00 pm only."]
+    },
+  
+    {"tag": "funActivities",
+    "patterns": ["will there be any extra curriculum activities?","does the college conducts any fun program"],
+    "responses": ["Yes, Of course. Our college not only provides excellent education but also encourage students to take part in different curriculum activities. The college conducts yearly programs like Sports meet, Carnival, Holi festival, and Christmas. \n Also our college has basketball court, badminton court, table tennis, chess, carrom board and many more refreshment zones."]
+    },
+  
+    {"tag": "facilities",
+    "patterns": ["what facilities are provided by the college?","what are the facilities of college for students", "what are the college infrastructures "],
+    "responses": ["With excellent education facilities, Our College provides various other facilities like 24 hours internet, library, classes with AC, discusson room, canteen, parking space, and student service for any students queries."]
+    },
+  
+    {"tag": "fee",
+    "patterns": ["how much is the college fee","what is the fee structure"],
+    "responses": ["Course BIT\nAdmission fee=RS 96,000\nYear 1\nUniversity and Exam fee= RS 100,000 Each semester fee=RS 69,000 Total fee= RS 334,000\nYear 2\nUniversity and Exam fee= RS 100,000 Each semester fee=RS 69,000 Total fee= RS 238,000\nYear 3\nUniversity and Exam fee= RS 100,000 Each semester fee=RS 69,000 Total fee= RS 238,000\nGrandTotal fee= RS 810,000\n\nCourse BBA\nAdmission fee=RS 96,000\nYear 1\nUniversity and Exam fee= RS 100,000 Each semester fee=RS 52,000 Total fee= RS 300,000\nYear 2\nUniversity and Exam fee= RS 100,000 Each semester fee=RS 52,000 Total fee= RS 204,000\nYear 3\nUniversity and Exam fee= RS 100,000 Each semester fee=RS 52,000 Total fee= RS 204,000\nYear 4\nUniversity and Exam fee= RS 50,000 Semester fee=RS 52,000 Total fee= RS 102,000\nGrandTotal fee= RS 810,000"]
+    },
+  
+    {"tag": "goodbye",
+    "patterns": ["cya","See you later","Goodbye","I am leaving","Have a Good Day","bye","see ya"],
+    "responses": ["Sad to see you go :(","Talk you later","Goodbye"]
+    },
+  
+    {"tag": "invalid",
+      "patterns": ["","gvsd","asbhk"],
+      "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"]
+    },
+  
+    {"tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    }
+  ]}
