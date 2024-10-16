@@ -6,8 +6,26 @@ import numpy as np
 from flask_cors import CORS
 import nltk
 from nltk.stem import WordNetLemmatizer
+from keras.optimizers import SGD
+from keras.models import load_model
 
-from tensorflow.keras.models import load_model
+class CustomSGD(SGD):
+    def __init__(self, learning_rate=0.01, momentum=0.0, nesterov=False, **kwargs):
+        # Call the parent class constructor
+        super(CustomSGD, self).__init__(learning_rate=learning_rate, momentum=momentum, nesterov=nesterov, **kwargs)
+
+    def get_updates(self, loss, params):
+        # Here you can implement any custom behavior for the optimizer.
+        # For now, we'll use the standard SGD behavior.
+        return super(CustomSGD, self).get_updates(loss, params)
+
+    def get_config(self):
+        # To save your custom optimizer's parameters, you need to implement get_config.
+        config = super(CustomSGD, self).get_config()
+        config.update({
+            'custom_param': self.custom_param,  # Replace with any custom parameters
+        })
+        return config
 
 nltk.download('punkt')
 nltk.download('wordnet')
@@ -20,7 +38,7 @@ with open('questions.json', 'r', encoding='utf-8') as file:
 
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
-model = load_model('chatbotmodel.h5')
+model = load_model('chatbotmodel.h5', custom_objects={'Custom>SGD': CustomSGD})
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
