@@ -6,8 +6,9 @@ import numpy as np
 from flask_cors import CORS
 import nltk
 from nltk.stem import WordNetLemmatizer
-from keras.optimizers import SGD
-from keras.models import load_model
+from tensorflow.keras.optimizers import SGD
+
+from tensorflow.keras.models import load_model
 
 class CustomSGD(SGD):
     def __init__(self, learning_rate=0.01, momentum=0.0, nesterov=False, **kwargs):
