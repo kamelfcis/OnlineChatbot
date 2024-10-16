@@ -1,8 +1,11 @@
 .idea/
 __pycache__/ 
+*.log
 *.h5
 *.pkl
+data/
+nltk_data/
 *.json 
 *.pyc
 .DS_Store
-data/
+
