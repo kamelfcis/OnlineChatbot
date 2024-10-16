@@ -7,44 +7,33 @@ from flask_cors import CORS
 import nltk
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.optimizers import SGD
-
 from tensorflow.keras.models import load_model
 
 class CustomSGD(SGD):
     def __init__(self, learning_rate=0.01, momentum=0.0, nesterov=False, **kwargs):
-        # Call the parent class constructor
         super(CustomSGD, self).__init__(learning_rate=learning_rate, momentum=momentum, nesterov=nesterov, **kwargs)
 
-    def get_updates(self, loss, params):
-        # Here you can implement any custom behavior for the optimizer.
-        # For now, we'll use the standard SGD behavior.
-        return super(CustomSGD, self).get_updates(loss, params)
-
     def get_config(self):
-        # To save your custom optimizer's parameters, you need to implement get_config.
-        config = super(CustomSGD, self).get_config()
-        config.update({
-            'custom_param': self.custom_param,  # Replace with any custom parameters
-        })
-        return config
+        return super(CustomSGD, self).get_config()
 
+# NLTK Downloads (Ensure you only download if not already available)
 nltk.download('punkt')
 nltk.download('wordnet')
 lemmatizer = WordNetLemmatizer()
 
 app = Flask(__name__)
 CORS(app)
+
 with open('questions.json', 'r', encoding='utf-8') as file:
     intents = json.load(file)
 
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
-model = load_model('chatbotmodel.h5', custom_objects={'Custom>SGD': CustomSGD})
+model = load_model('chatbotmodel.h5', custom_objects={'CustomSGD': CustomSGD})
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
-    sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
-    return sentence_words
+    return [lemmatizer.lemmatize(word) for word in sentence_words]
 
 def bag_of_words(sentence):
     sentence_words = clean_up_sentence(sentence)
@@ -62,9 +51,7 @@ def predict_class(sentence):
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
 
     results.sort(key=lambda x: x[1], reverse=True)
-    return_list = []
-    for r in results:
-        return_list.append({'intent': classes[r[0]], 'probability': str(r[1])})
+    return_list = [{'intent': classes[r[0]], 'probability': str(r[1])} for r in results]
     return return_list
 
 def get_response(intents_list, intents_json):
@@ -72,9 +59,8 @@ def get_response(intents_list, intents_json):
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
         if i['tag'] == tag:
-            result = random.choice(i['responses'])
-            break
-    return result
+            return random.choice(i['responses'])
+    return "I'm sorry, I didn't understand that."
 
 @app.route('/')
 def home():
@@ -87,4 +73,4 @@ def chat():
     ints = predict_class(message)
     res = get_response(ints, intents)
     return jsonify({"response": res})
-
+ 
