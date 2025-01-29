@@ -18,6 +18,8 @@ class CustomSGD(SGD):
 
 # NLTK Downloads (Ensure you only download if not already available)
 nltk.download('punkt')
+
+nltk.download('punkt_tab')
 nltk.download('wordnet')
 lemmatizer = WordNetLemmatizer()
 

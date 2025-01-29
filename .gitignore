@@ -8,4 +8,4 @@ nltk_data/
 *.json 
 *.pyc
 .DS_Store
-
+venv/

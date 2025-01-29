@@ -1,91 +1,114 @@
-{"intents": [
-    {"tag": "greetings",
-    "patterns": ["hello","مرحبا","استفسار","مساء الخير","Greetings","what's up?","how is it going?"],
-    "responses": ["مرحبا بك في جامعة 6 اكتوبر","مرحبا بك في جامعة 6 اكتوبر!","مرحبا بك في جامعة 6 اكتوبر ممكن استفسارك"]
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hello", "Hi", "Good morning", "Good afternoon", "Hey", "Hi there", "Hello, how are you?", "Good evening", "Hey there"],
+      "responses": ["Hello! How can I assist you today?", "Hi! How can I help you with cakes today?", "Greetings! What can I do for you?", "Hello! Feel free to ask me anything about cakes."]
     },
-  
-    {"tag": "name",
-    "patterns": ["what is your name","name","what's your name","who are you","what should I call you"],
-    "responses": ["You can call me Ribot","I'm Ribot","I'm Ribot your virtual assistant"]
+    {
+      "tag": "cake",
+      "patterns": ["What types of cakes are available?", "What kinds of cakes can I order?", "Cake options", "What cake flavors are offered?", "What are the types of cakes?"],
+      "responses": ["We offer a variety of cakes including chocolate, vanilla, red velvet, carrot cake, fruit cakes, cheesecakes, and specialty cakes for various occasions."]
     },
-  
-    {"tag": "courses",
-    "patterns": ["كم ساعة معتمدة لابد من اجتيازها حتى يستطيع الطالب التخرج؟", "الساعات المعتمدة"],
-    "responses": ["142 ساعة معتمدة"]
+    {
+      "tag": "diabeticCake",
+      "patterns": ["What is a diabetic-friendly cake?", "Do you have cakes for diabetics?", "Can I order a sugar-free cake?", "What are diabetic cakes made of?", "Do you make cakes for people with diabetes?"],
+      "responses": ["Yes, we offer diabetic-friendly cakes made with sugar substitutes like stevia, monk fruit, or xylitol. Our diabetic cakes are made with whole wheat flour, almond flour, and can be customized to your taste preferences."]
     },
-  
-     {"tag": "courseDuration",
-    "patterns": ["ما هو الحد الأقصى لعدد الساعات التي ممكن أن يسجلها الطالب في الفصل الصيفي؟", "how long will it take to complete BIT or BBA course"],
-    "responses": ["9 ساعات فقط."]
+    {
+      "tag": "weddingCake",
+      "patterns": ["Do you make wedding cakes?", "What kinds of wedding cakes do you offer?", "Wedding cake options", "Can you make a custom wedding cake?", "What sizes are available for wedding cakes?"],
+      "responses": ["We specialize in custom wedding cakes in a variety of styles such as classic, modern, vintage, and themed. You can choose from multiple tiers, and we can match your wedding colors and theme. Delivery and setup are available."]
     },
-  
-     {"tag": "Location",
-    "patterns": ["ماهي أقسام الكلية الثلاث؟","where is it located","what is the location of the college"],
-    "responses": ["صحافة، وإذاعة، وعلاقات عامة، وإعلان"]
+    {
+      "tag": "customCake",
+      "patterns": ["How can I customize a cake?", "Can I get a custom cake for my event?", "What are the options for a custom cake?", "How do I order a customized cake?", "Do you make personalized cakes?"],
+      "responses": ["You can customize cakes in terms of flavor, size, decoration, and theme. Whether it's for a birthday, anniversary, or any other special occasion, we can create the perfect cake that fits your needs. Simply contact us with your requirements and we will help design the perfect cake."]
     },
-  
-    {"tag": "semesters",
-    "patterns": ["ماهي شروط الالتحاق بأقسام الكلية الثلاث؟","شروط الالتحاق بالكلية"],
-    "responses": ["وفقا للائحة الكلية يتم تحديد شروط الالتحاق بأقسام الكلية وفقا لما يلي:\nالمعدل التراكمي في الأربع فصول الدراسية التي اجتازها الطالب \nتقديرات مواد التخصص\nرغبة الطالب في حالة استيفاء المعياريين السابقين "]
+    {
+      "tag": "cakeRecipe",
+      "patterns": ["How do I make a cake?", "What is the recipe for a cake?", "How to bake a cake?", "Can you provide a cake recipe?", "How can I bake a simple cake?"],
+      "responses": ["Here’s a simple recipe to make a basic cake:\nIngredients: 1 ½ cups of flour, 1 cup of sugar, 1 tsp of baking powder, ½ cup of butter, 2 eggs, 1 tsp of vanilla, ½ cup of milk.\nInstructions: Preheat the oven to 350°F (175°C). Mix dry ingredients in one bowl and wet ingredients in another. Combine both mixtures, pour into a greased pan, and bake for 30 minutes."]
     },
-  
-    {"tag": "semDuration",
-    "patterns": ["متى يتم وضع الطالب تحت الإنذار الأكاديمي؟","الانظار الاكاديمي"],
-    "responses": ["عند انخفاض معدل التراكمي للطالب ليصبح أقل من 2 ، و يتم تخفيض العبأ الدراسي له ليصبح 12 ساعة فقط "]
+    {
+      "tag": "cakeDecorating",
+      "patterns": ["How do I decorate a cake?", "What are some cake decorating ideas?", "How to decorate cakes professionally?", "Can you teach me cake decorating?", "What tools do I need to decorate a cake?"],
+      "responses": ["To decorate a cake, you can use tools like piping bags, fondant, edible flowers, sprinkles, and food coloring. Start by frosting the cake evenly, then add details like piping, writing, or any other decorative elements. There are many tutorials online for beginners to advanced cake decorators."]
     },
-  
-    {"tag": "studentRequirements",
-    "patterns": ["ما شروط التحويل من كلية آخرى لكلية الإعلام وفنون الاتصال؟","entry requirements","admission requirements"],
-    "responses": ["أن يكون الطالب حاصلا على الثانوية العامة أو ما يعادلها في العام الحالي أو الأعوام السابقة بحد أقصي عامين فقط "]
+    {
+      "tag": "cakeDelivery",
+      "patterns": ["Do you deliver cakes?", "Can I get my cake delivered?", "Is cake delivery available?", "How do I get the cake delivered?", "Do you offer cake delivery services?"],
+      "responses": ["Yes, we offer cake delivery services to your location. You can place an order online or by phone, and we will deliver the cake fresh and on time. Delivery fees may apply depending on the distance."]
     },
-  
-    {"tag": "classes",
-    "patterns": ["هل يوجد شعبة انجليزية؟","how long are the classes?"],
-    "responses": ["لا يوجد شعبة انجليزية لكن هناك عدد من المقررات يتم تدريسها باللغة الإنجليزية "]
+    {
+      "tag": "cakeIngredients",
+      "patterns": ["What ingredients are used in cakes?", "What do you put in a cake?", "What are the main ingredients in a cake?", "Can I make a cake with common ingredients?", "What are some cake ingredients for beginners?"],
+      "responses": ["The basic ingredients for most cakes include flour, sugar, eggs, butter, milk, and baking powder. You can add additional ingredients like chocolate, fruits, nuts, or flavorings like vanilla, almond, or lemon to enhance the taste."]
     },
-  
-    {"tag": "teachingStyle",
-    "patterns": ["كيف يقوم الطالب بتسجيل المقررات الدراسية الخاصة به في كل فصل؟","Is the teaching pattern different from other college?","what is the teaching format?"],
-    "responses": ["يتم ذلك من خلال الموقع الإلكتروني للجامعة، حيث يقوم الطالب بتسجيل الدخول على موقع الجامعة من خلال البريد الإلكتروني الجامعي الخاص به ويقوم تسجيل رغبته في دراسة هذه المقررات بشكل مبدئي."]
+    {
+      "tag": "cakeDecorationServices",
+      "patterns": ["Do you provide cake decoration services?", "Can I order a decorated cake?", "How can I get my cake decorated?", "Do you offer cake decoration for special occasions?"],
+      "responses": ["Yes, we provide cake decoration services for various occasions including birthdays, weddings, and corporate events. You can choose your design, or we can assist you in creating the perfect cake for your occasion."]
     },
-  
-    {"tag": "exams",
-    "patterns": ["what are the exams like?","What is the exam pattern"],
-    "responses": ["There are assignments which carry more weight than your written exams. The assignments have deadlines which you should not exceed if you want to get better marks."]
+    {
+      "tag": "veganCake",
+      "patterns": ["Do you make vegan cakes?", "Can I order a vegan cake?", "What is a vegan cake?", "Are vegan cakes available?", "Can I get a dairy-free cake?"],
+      "responses": ["Yes, we offer vegan cakes that are free from animal products, including eggs, milk, and butter. We use plant-based alternatives to ensure the cake is delicious and cruelty-free. You can also customize the cake flavor as per your preference."]
     },
-  
-    {"tag": "hours",
-    "patterns": ["what are your hours","when are you guys open","what your hours of operation"],
-    "responses": ["You can message us here at any hours. But our college premises will be open from 7:00 am to 5:00 pm only."]
+    {
+      "tag": "cakeAllergies",
+      "patterns": ["Can you make cakes for people with allergies?", "Do you have allergy-free cakes?", "Are your cakes nut-free?", "Can I get a gluten-free cake?", "Do you offer allergy-free cake options?"],
+      "responses": ["Yes, we offer allergen-free cakes, including gluten-free, nut-free, and dairy-free options. Please inform us of any allergies when placing your order, and we will take all necessary precautions to avoid cross-contamination."]
     },
-  
-    {"tag": "funActivities",
-    "patterns": ["will there be any extra curriculum activities?","does the college conducts any fun program"],
-    "responses": ["Yes, Of course. Our college not only provides excellent education but also encourage students to take part in different curriculum activities. The college conducts yearly programs like Sports meet, Carnival, Holi festival, and Christmas. \n Also our college has basketball court, badminton court, table tennis, chess, carrom board and many more refreshment zones."]
+    {
+      "tag": "cakeStorage",
+      "patterns": ["How should I store my cake?", "How do I keep my cake fresh?", "Can I freeze a cake?", "What is the best way to store a cake?", "How long can I keep a cake?"],
+      "responses": ["To store your cake, keep it in an airtight container in a cool, dry place. If it's frosted with buttercream or fondant, it can be kept at room temperature for 2-3 days. For cakes with cream or fresh fillings, refrigerate them. Cakes can also be frozen for up to 2 months if wrapped properly."]
     },
-  
-    {"tag": "facilities",
-    "patterns": ["what facilities are provided by the college?","what are the facilities of college for students", "what are the college infrastructures "],
-    "responses": ["With excellent education facilities, Our College provides various other facilities like 24 hours internet, library, classes with AC, discusson room, canteen, parking space, and student service for any students queries."]
+    {
+      "tag": "birthdayCake",
+      "patterns": ["Do you make birthday cakes?", "What kinds of birthday cakes can I order?", "Can I get a custom birthday cake?", "What types of cakes are good for birthdays?"],
+      "responses": ["Yes, we offer custom birthday cakes in a wide range of designs and flavors. You can select from chocolate, vanilla, red velvet, or any flavor of your choice. We also offer cakes in various themes like cartoon, sports, and more."]
     },
-  
-    {"tag": "fee",
-    "patterns": ["how much is the college fee","what is the fee structure"],
-    "responses": ["Course BIT\nAdmission fee=RS 96,000\nYear 1\nUniversity and Exam fee= RS 100,000 Each semester fee=RS 69,000 Total fee= RS 334,000\nYear 2\nUniversity and Exam fee= RS 100,000 Each semester fee=RS 69,000 Total fee= RS 238,000\nYear 3\nUniversity and Exam fee= RS 100,000 Each semester fee=RS 69,000 Total fee= RS 238,000\nGrandTotal fee= RS 810,000\n\nCourse BBA\nAdmission fee=RS 96,000\nYear 1\nUniversity and Exam fee= RS 100,000 Each semester fee=RS 52,000 Total fee= RS 300,000\nYear 2\nUniversity and Exam fee= RS 100,000 Each semester fee=RS 52,000 Total fee= RS 204,000\nYear 3\nUniversity and Exam fee= RS 100,000 Each semester fee=RS 52,000 Total fee= RS 204,000\nYear 4\nUniversity and Exam fee= RS 50,000 Semester fee=RS 52,000 Total fee= RS 102,000\nGrandTotal fee= RS 810,000"]
+    {
+      "tag": "cakeFlavors",
+      "patterns": ["What flavors do you have for cakes?", "What are the available cake flavors?", "Can I choose the flavor of my cake?", "What flavor options are there for cakes?"],
+      "responses": ["We offer a wide variety of cake flavors including chocolate, vanilla, red velvet, marble, carrot, lemon, and more. We also offer specialty flavors like cookies and cream, salted caramel, and coconut. You can pick any flavor or create a custom flavor combination."]
     },
-  
-    {"tag": "goodbye",
-    "patterns": ["cya","See you later","Goodbye","I am leaving","Have a Good Day","bye","see ya"],
-    "responses": ["Sad to see you go :(","Talk you later","Goodbye"]
+    {
+      "tag": "specialOccasionCake",
+      "patterns": ["Do you make cakes for special occasions?", "Can I order a cake for a special event?", "Do you make cakes for anniversaries, graduations, etc.?"],
+      "responses": ["Yes, we specialize in cakes for all types of special occasions such as anniversaries, graduations, baby showers, and more. We can personalize the cake according to your event's theme and style."]
     },
-  
-    {"tag": "invalid",
-      "patterns": ["","gvsd","asbhk"],
-      "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"]
+    {
+      "tag": "cakeSlicing",
+      "patterns": ["How do I cut a cake properly?", "What is the best way to slice a cake?", "How should I cut a round cake?", "Can you teach me how to slice a cake evenly?"],
+      "responses": ["To cut a round cake, use a sharp knife. Start by cutting the cake in half, then into quarters, and continue cutting smaller slices. For layered cakes, make sure to slice through each layer evenly to ensure all layers are included in each slice."]
     },
-  
-    {"tag": "thanks",
+    {
+      "tag": "cakeTasting",
+      "patterns": ["Do you offer cake tasting?", "Can I taste the cake before ordering?", "How do I arrange for a cake tasting?", "Do you offer samples of your cakes?"],
+      "responses": ["Yes, we offer cake tasting sessions by appointment. You can sample different cake flavors and frosting options before making your final decision. Please contact us to schedule a cake tasting session."]
+    },
+    {
+      "tag": "cakeCustomization",
+      "patterns": ["Can I customize the design of my cake?", "Can I get a custom-designed cake?", "How do I customize the cake decoration?"],
+      "responses": ["Yes, we offer full customization of your cake's design, including decorations, themes, colors, and shapes. You can choose from a variety of designs or let us know your preferences, and we will create a unique cake tailored to your vision."]
+    },
+    {
+      "tag": "thankYou",
       "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      "responses": ["Happy to help!", "Anytime!", "My pleasure"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Cya", "See you later", "Goodbye", "I am leaving", "Have a Good Day", "bye", "see ya"],
+      "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye"]
+    },
+    {
+      "tag": "invalid",
+      "patterns": ["", "gvsd", "asbhk"],
+      "responses": ["Sorry, I can't understand you.", "Please provide more information.", "Not sure I understand."]
     }
-  ]}
+  ]
+}
