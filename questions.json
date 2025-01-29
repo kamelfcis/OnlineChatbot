@@ -2,113 +2,105 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["Hello", "Hi", "Good morning", "Good afternoon", "Hey", "Hi there", "Hello, how are you?", "Good evening", "Hey there"],
-      "responses": ["Hello! How can I assist you today?", "Hi! How can I help you with cakes today?", "Greetings! What can I do for you?", "Hello! Feel free to ask me anything about cakes."]
+      "patterns": ["Hello", "Hi", "Hey", "Hi there", "Hello, how are you?", "Good morning", "Good afternoon", "Good evening", "Hey there!"],
+      "responses": ["Hello! Welcome to Eshopy. How can I assist you today?", "Hi there! Looking for something specific on Eshopy?", "Greetings! How can I help you with your shopping needs?"]
     },
     {
-      "tag": "cake",
-      "patterns": ["What types of cakes are available?", "What kinds of cakes can I order?", "Cake options", "What cake flavors are offered?", "What are the types of cakes?"],
-      "responses": ["We offer a variety of cakes including chocolate, vanilla, red velvet, carrot cake, fruit cakes, cheesecakes, and specialty cakes for various occasions."]
+      "tag": "product_categories",
+      "patterns": ["What products do you sell?", "What can I buy on Eshopy?", "What categories are available?", "Do you sell fashion items?", "What kind of electronics do you have?"],
+      "responses": [
+        "Eshopy offers a wide range of categories, including:\n1. Electronics (phones, laptops, smartwatches)\n2. Fashion (clothing, accessories, shoes)\n3. Home Essentials (furniture, kitchenware, decor)\n4. Beauty & Health (makeup, skincare, vitamins)\n5. Groceries (fresh food, snacks, beverages)\n6. Sports & Outdoor (gym equipment, sportswear)\n7. Toys & Baby Products\n\nLet me know what you’re looking for!"
+      ]
     },
     {
-      "tag": "diabeticCake",
-      "patterns": ["What is a diabetic-friendly cake?", "Do you have cakes for diabetics?", "Can I order a sugar-free cake?", "What are diabetic cakes made of?", "Do you make cakes for people with diabetes?"],
-      "responses": ["Yes, we offer diabetic-friendly cakes made with sugar substitutes like stevia, monk fruit, or xylitol. Our diabetic cakes are made with whole wheat flour, almond flour, and can be customized to your taste preferences."]
+      "tag": "product_availability",
+      "patterns": ["Is this item in stock?", "Do you have iPhone 15?", "Can I check product availability?", "Are these shoes available in size 10?", "Is this laptop in stock?"],
+      "responses": ["You can check the availability of products on the Eshopy app by visiting the product page. Would you like me to search for a specific product?"]
     },
     {
-      "tag": "weddingCake",
-      "patterns": ["Do you make wedding cakes?", "What kinds of wedding cakes do you offer?", "Wedding cake options", "Can you make a custom wedding cake?", "What sizes are available for wedding cakes?"],
-      "responses": ["We specialize in custom wedding cakes in a variety of styles such as classic, modern, vintage, and themed. You can choose from multiple tiers, and we can match your wedding colors and theme. Delivery and setup are available."]
+      "tag": "product_price",
+      "patterns": ["What is the price of this item?", "How much does this cost?", "Can I see the price?", "Is there a discount on this item?", "What's the price of iPhone 15?"],
+      "responses": ["Prices vary based on product and offers. You can find the latest prices on the product page in the Eshopy app."]
     },
     {
-      "tag": "customCake",
-      "patterns": ["How can I customize a cake?", "Can I get a custom cake for my event?", "What are the options for a custom cake?", "How do I order a customized cake?", "Do you make personalized cakes?"],
-      "responses": ["You can customize cakes in terms of flavor, size, decoration, and theme. Whether it's for a birthday, anniversary, or any other special occasion, we can create the perfect cake that fits your needs. Simply contact us with your requirements and we will help design the perfect cake."]
+      "tag": "order_tracking",
+      "patterns": ["Where is my order?", "How can I track my order?", "Track my shipment", "Has my order been shipped?", "Order status update"],
+      "responses": ["You can track your order in the 'My Orders' section of the Eshopy app. Do you want me to guide you through it?"]
     },
     {
-      "tag": "cakeRecipe",
-      "patterns": ["How do I make a cake?", "What is the recipe for a cake?", "How to bake a cake?", "Can you provide a cake recipe?", "How can I bake a simple cake?"],
-      "responses": ["Here’s a simple recipe to make a basic cake:\nIngredients: 1 ½ cups of flour, 1 cup of sugar, 1 tsp of baking powder, ½ cup of butter, 2 eggs, 1 tsp of vanilla, ½ cup of milk.\nInstructions: Preheat the oven to 350°F (175°C). Mix dry ingredients in one bowl and wet ingredients in another. Combine both mixtures, pour into a greased pan, and bake for 30 minutes."]
+      "tag": "order_cancellation",
+      "patterns": ["How do I cancel my order?", "Can I cancel my order?", "I want to cancel my order", "Cancel order request"],
+      "responses": ["You can cancel an order before it is shipped in the 'My Orders' section. If it's already shipped, please contact customer support for assistance."]
     },
     {
-      "tag": "cakeDecorating",
-      "patterns": ["How do I decorate a cake?", "What are some cake decorating ideas?", "How to decorate cakes professionally?", "Can you teach me cake decorating?", "What tools do I need to decorate a cake?"],
-      "responses": ["To decorate a cake, you can use tools like piping bags, fondant, edible flowers, sprinkles, and food coloring. Start by frosting the cake evenly, then add details like piping, writing, or any other decorative elements. There are many tutorials online for beginners to advanced cake decorators."]
+      "tag": "order_modification",
+      "patterns": ["Can I change my order?", "I want to modify my order", "How do I change the delivery address?", "Can I add another item to my order?"],
+      "responses": ["Modifications can be made before shipping. Go to 'My Orders' in the Eshopy app and select the order to modify. If already shipped, contact support."]
     },
     {
-      "tag": "cakeDelivery",
-      "patterns": ["Do you deliver cakes?", "Can I get my cake delivered?", "Is cake delivery available?", "How do I get the cake delivered?", "Do you offer cake delivery services?"],
-      "responses": ["Yes, we offer cake delivery services to your location. You can place an order online or by phone, and we will deliver the cake fresh and on time. Delivery fees may apply depending on the distance."]
+      "tag": "payment_methods",
+      "patterns": ["What payment methods are available?", "Do you accept PayPal?", "Can I pay with a credit card?", "Is cash on delivery available?", "How can I pay for my order?"],
+      "responses": ["Eshopy accepts:\n- Credit/Debit cards (Visa, MasterCard, American Express)\n- PayPal\n- Cash on delivery (in selected regions)\n- E-wallets (Google Pay, Apple Pay)"]
     },
     {
-      "tag": "cakeIngredients",
-      "patterns": ["What ingredients are used in cakes?", "What do you put in a cake?", "What are the main ingredients in a cake?", "Can I make a cake with common ingredients?", "What are some cake ingredients for beginners?"],
-      "responses": ["The basic ingredients for most cakes include flour, sugar, eggs, butter, milk, and baking powder. You can add additional ingredients like chocolate, fruits, nuts, or flavorings like vanilla, almond, or lemon to enhance the taste."]
+      "tag": "return_policy",
+      "patterns": ["What is your return policy?", "How do I return an item?", "Can I get a refund?", "How long do I have to return an order?"],
+      "responses": ["Eshopy allows returns within 14 days of delivery. The item must be unused and in original packaging. Refunds are processed within 5-7 business days."]
     },
     {
-      "tag": "cakeDecorationServices",
-      "patterns": ["Do you provide cake decoration services?", "Can I order a decorated cake?", "How can I get my cake decorated?", "Do you offer cake decoration for special occasions?"],
-      "responses": ["Yes, we provide cake decoration services for various occasions including birthdays, weddings, and corporate events. You can choose your design, or we can assist you in creating the perfect cake for your occasion."]
+      "tag": "refund_status",
+      "patterns": ["Where is my refund?", "How long does a refund take?", "I returned an item, when will I get my money back?", "Refund tracking"],
+      "responses": ["Refunds typically take 5-7 business days to process. You can check the status in the 'My Orders' section of the app."]
     },
     {
-      "tag": "veganCake",
-      "patterns": ["Do you make vegan cakes?", "Can I order a vegan cake?", "What is a vegan cake?", "Are vegan cakes available?", "Can I get a dairy-free cake?"],
-      "responses": ["Yes, we offer vegan cakes that are free from animal products, including eggs, milk, and butter. We use plant-based alternatives to ensure the cake is delicious and cruelty-free. You can also customize the cake flavor as per your preference."]
+      "tag": "shipping_information",
+      "patterns": ["How long does shipping take?", "What are the delivery options?", "Do you offer express shipping?", "Is there free delivery?", "How much does shipping cost?"],
+      "responses": ["Standard delivery takes 3-7 days. Express delivery options are available at an additional cost. Free shipping is available on orders above a certain amount."]
     },
     {
-      "tag": "cakeAllergies",
-      "patterns": ["Can you make cakes for people with allergies?", "Do you have allergy-free cakes?", "Are your cakes nut-free?", "Can I get a gluten-free cake?", "Do you offer allergy-free cake options?"],
-      "responses": ["Yes, we offer allergen-free cakes, including gluten-free, nut-free, and dairy-free options. Please inform us of any allergies when placing your order, and we will take all necessary precautions to avoid cross-contamination."]
+      "tag": "account_help",
+      "patterns": ["How do I create an account?", "I forgot my password", "How can I reset my password?", "How do I update my profile?"],
+      "responses": ["You can sign up using your email or social media. To reset your password, go to 'Forgot Password' on the login page."]
     },
     {
-      "tag": "cakeStorage",
-      "patterns": ["How should I store my cake?", "How do I keep my cake fresh?", "Can I freeze a cake?", "What is the best way to store a cake?", "How long can I keep a cake?"],
-      "responses": ["To store your cake, keep it in an airtight container in a cool, dry place. If it's frosted with buttercream or fondant, it can be kept at room temperature for 2-3 days. For cakes with cream or fresh fillings, refrigerate them. Cakes can also be frozen for up to 2 months if wrapped properly."]
+      "tag": "customer_support",
+      "patterns": ["How can I contact customer support?", "I need help with my order", "Is there live chat support?", "Where can I get assistance?"],
+      "responses": ["You can contact Eshopy support via the 'Help Center' in the app or through live chat. Support is available 24/7."]
     },
     {
-      "tag": "birthdayCake",
-      "patterns": ["Do you make birthday cakes?", "What kinds of birthday cakes can I order?", "Can I get a custom birthday cake?", "What types of cakes are good for birthdays?"],
-      "responses": ["Yes, we offer custom birthday cakes in a wide range of designs and flavors. You can select from chocolate, vanilla, red velvet, or any flavor of your choice. We also offer cakes in various themes like cartoon, sports, and more."]
+      "tag": "discounts_offers",
+      "patterns": ["Do you have any discounts?", "Are there any promo codes?", "How can I get a discount?", "What are the latest offers?"],
+      "responses": ["Yes! Check the 'Deals' section in the Eshopy app for ongoing discounts and promotions."]
     },
     {
-      "tag": "cakeFlavors",
-      "patterns": ["What flavors do you have for cakes?", "What are the available cake flavors?", "Can I choose the flavor of my cake?", "What flavor options are there for cakes?"],
-      "responses": ["We offer a wide variety of cake flavors including chocolate, vanilla, red velvet, marble, carrot, lemon, and more. We also offer specialty flavors like cookies and cream, salted caramel, and coconut. You can pick any flavor or create a custom flavor combination."]
+      "tag": "wishlist",
+      "patterns": ["How do I add items to my wishlist?", "Where is my wishlist?", "Can I save products for later?", "How does the wishlist work?"],
+      "responses": ["Tap the '❤️' icon on any product to add it to your wishlist. You can access your saved items in the 'Wishlist' section of your account."]
     },
     {
-      "tag": "specialOccasionCake",
-      "patterns": ["Do you make cakes for special occasions?", "Can I order a cake for a special event?", "Do you make cakes for anniversaries, graduations, etc.?"],
-      "responses": ["Yes, we specialize in cakes for all types of special occasions such as anniversaries, graduations, baby showers, and more. We can personalize the cake according to your event's theme and style."]
+      "tag": "cart",
+      "patterns": ["How do I view my cart?", "Where is my shopping cart?", "How can I remove items from my cart?", "Can I edit my cart before checkout?"],
+      "responses": ["You can view and manage your cart by tapping the 'Cart' icon in the app. You can add, remove, or update items before proceeding to checkout."]
     },
     {
-      "tag": "cakeSlicing",
-      "patterns": ["How do I cut a cake properly?", "What is the best way to slice a cake?", "How should I cut a round cake?", "Can you teach me how to slice a cake evenly?"],
-      "responses": ["To cut a round cake, use a sharp knife. Start by cutting the cake in half, then into quarters, and continue cutting smaller slices. For layered cakes, make sure to slice through each layer evenly to ensure all layers are included in each slice."]
+      "tag": "loyalty_rewards",
+      "patterns": ["Do you have a loyalty program?", "How can I earn rewards?", "What are Eshopy points?", "Can I redeem points for discounts?"],
+      "responses": ["Eshopy has a rewards program where you earn points for purchases. Points can be redeemed for discounts and exclusive offers."]
     },
     {
-      "tag": "cakeTasting",
-      "patterns": ["Do you offer cake tasting?", "Can I taste the cake before ordering?", "How do I arrange for a cake tasting?", "Do you offer samples of your cakes?"],
-      "responses": ["Yes, we offer cake tasting sessions by appointment. You can sample different cake flavors and frosting options before making your final decision. Please contact us to schedule a cake tasting session."]
+      "tag": "product_reviews",
+      "patterns": ["Can I leave a review?", "Where can I see product reviews?", "Are there ratings for products?", "How do I read customer feedback?"],
+      "responses": ["Yes! You can read and write reviews under each product page in the Eshopy app."]
     },
     {
-      "tag": "cakeCustomization",
-      "patterns": ["Can I customize the design of my cake?", "Can I get a custom-designed cake?", "How do I customize the cake decoration?"],
-      "responses": ["Yes, we offer full customization of your cake's design, including decorations, themes, colors, and shapes. You can choose from a variety of designs or let us know your preferences, and we will create a unique cake tailored to your vision."]
-    },
-    {
-      "tag": "thankYou",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-      "responses": ["Happy to help!", "Anytime!", "My pleasure"]
+      "tag": "thank_you",
+      "patterns": ["Thanks", "Thank you", "That was helpful", "Appreciate it", "Thanks for helping me"],
+      "responses": ["You're welcome! Happy shopping on Eshopy!", "Glad to assist you! Let me know if you need more help.", "Anytime! Enjoy your shopping."]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Cya", "See you later", "Goodbye", "I am leaving", "Have a Good Day", "bye", "see ya"],
-      "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye"]
-    },
-    {
-      "tag": "invalid",
-      "patterns": ["", "gvsd", "asbhk"],
-      "responses": ["Sorry, I can't understand you.", "Please provide more information.", "Not sure I understand."]
+      "patterns": ["Bye", "Goodbye", "See you later", "I am leaving", "Talk to you later"],
+      "responses": ["Goodbye! Have a great day shopping on Eshopy!", "See you soon!", "Come back anytime for great deals."]
     }
   ]
 }
